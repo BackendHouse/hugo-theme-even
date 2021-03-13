@@ -2,6 +2,22 @@
   <!-- Disqus -->
   {{- if .Site.DisqusShortname -}}
     <div id="disqus_thread"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+	<script>
+	var gitment = new Gitment({
+	  id: '后端技术小屋', // 可选。默认为 location.href
+	  owner: 'taiyang-li',
+	  repo: 'https://github.com/BackendHouse/blog_sources',
+	  oauth: {
+	    client_id: 'a75baa5941ec8d9293bd',
+	    client_secret: 'f63c9c3e360760ee9200e364ac839d0007cb0af7',
+	  },
+	})
+	gitment.render('container')
+	</script>
+
     <script type="text/javascript">
     (function() {
       // Don't ever inject Disqus on localhost--it creates unwanted
